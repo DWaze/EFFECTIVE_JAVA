@@ -1,12 +1,17 @@
 package Java8.Clone;
 
 public class Clone implements Cloneable {
-    private int phone_number;
-    private String name;
+
+    int phone_number;
+    String name;
 
     Clone(int phone_number, String name){
         this.phone_number = phone_number;
         this.name = name;
+    }
+
+    Clone() {
+
     }
 
     public int getPhone_number() {
@@ -26,5 +31,13 @@ public class Clone implements Cloneable {
     @Override
     protected Object clone() throws CloneNotSupportedException {
         return super.clone();
+    }
+
+    @Override
+    public String toString() {
+        return "Clone{" +
+                "phone_number=" + phone_number +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
