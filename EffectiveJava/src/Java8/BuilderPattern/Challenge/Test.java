@@ -1,29 +1,29 @@
 package Java8.BuilderPattern.Challenge;
 
-import Java8.BuilderPattern.Challenge.Builder.MealBuilder;
-import Java8.BuilderPattern.Challenge.ConcreteBuilder.NonVegMealBuilder;
-import Java8.BuilderPattern.Challenge.ConcreteBuilder.VegMealBuilder;
+import Java8.BuilderPattern.Challenge.Builder.MealBuilderInterface;
+import Java8.BuilderPattern.Challenge.ConcreteBuilder.NonVegMealBuilderInterface;
+import Java8.BuilderPattern.Challenge.ConcreteBuilder.VegMealBuilderInterface;
 import Java8.BuilderPattern.Challenge.Director.MealDirector;
 import Java8.BuilderPattern.Challenge.Product.Meal;
 
 public class Test {
     public static void main(String[] args) {
-        System.out.println("****  Restaurant Example ****");
+        System.out.println("****  Meal Pattern Demo ****");
 
         MealDirector mealDirector = new MealDirector();
 
-        MealBuilder vegMealBuilder = new VegMealBuilder();
+        MealBuilderInterface vegMealBuilderInterface = new VegMealBuilderInterface();
 
-        MealBuilder nonVegMealBuilder = new NonVegMealBuilder();
+        MealBuilderInterface nonVegMealBuilderInterface = new NonVegMealBuilderInterface();
 
-        mealDirector.construct(vegMealBuilder);
+        mealDirector.construct(vegMealBuilderInterface);
 
-        Meal meal1 = vegMealBuilder.getMeal();
+        Meal meal1 = vegMealBuilderInterface.getMeal();
         meal1.showItems();
 
-        mealDirector.construct(nonVegMealBuilder);
+        mealDirector.construct(nonVegMealBuilderInterface);
 
-        Meal meal2 = nonVegMealBuilder.getMeal();
+        Meal meal2 = nonVegMealBuilderInterface.getMeal();
         meal2.showItems();
 
     }

@@ -6,4 +6,7 @@ public abstract class ColdDrink implements Item {
     public Packing getPacking() {
         return new Bottle();
     }
+
+    @Override
+    public abstract Float getPriceItem();
 }

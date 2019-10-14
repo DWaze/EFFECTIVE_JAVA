@@ -3,9 +3,10 @@ package Java8.BuilderPattern.Challenge.Product;
 import Java8.BuilderPattern.Challenge.ClassHierarchy.Item;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Meal {
-    ArrayList<Item> items;
+    private List<Item> items;
 
     public Meal() {
         items = new ArrayList<Item>();
@@ -24,10 +25,11 @@ public class Meal {
     }
 
     public void showItems(){
-        String allItems="";
         for(Item item: items){
-            allItems += item.getNameItem() + " " + item.getPriceItem()+" "+item.getPacking().pack()+"\n";
+            System.out.println("item : "+ item.getNameItem());
+            System.out.println(", Packing : "+ item.getPacking().pack());
+            System.out.println(", Price : "+ item.getPriceItem());
+            System.out.println();
         }
-        System.out.println(allItems.toString());
     }
 }

@@ -1,14 +1,14 @@
 package Java8.BuilderPattern.Challenge.ConcreteBuilder;
 
-import Java8.BuilderPattern.Challenge.Builder.MealBuilder;
+import Java8.BuilderPattern.Challenge.Builder.MealBuilderInterface;
 import Java8.BuilderPattern.Challenge.ClassHierarchy.ChickenBurger;
 import Java8.BuilderPattern.Challenge.ClassHierarchy.Coke;
 import Java8.BuilderPattern.Challenge.Product.Meal;
 
-public class NonVegMealBuilder implements MealBuilder {
+public class NonVegMealBuilderInterface implements MealBuilderInterface {
     private Meal meal;
 
-    public NonVegMealBuilder() {
+    public NonVegMealBuilderInterface() {
         this.meal = new Meal();
     }
 

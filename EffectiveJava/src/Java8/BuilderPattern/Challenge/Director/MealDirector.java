@@ -1,11 +1,11 @@
 package Java8.BuilderPattern.Challenge.Director;
 
-import Java8.BuilderPattern.Challenge.Builder.MealBuilder;
+import Java8.BuilderPattern.Challenge.Builder.MealBuilderInterface;
 
 public class MealDirector {
-    MealBuilder mBuilder;
+    MealBuilderInterface mBuilder;
 
-    public void construct (MealBuilder mBuilder) {
+    public void construct (MealBuilderInterface mBuilder) {
         this.mBuilder = mBuilder;
         mBuilder.buildBurger();
         mBuilder.buildDrink();
